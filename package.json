@@ -1,0 +1,24 @@
+{
+  "name": "cal_heat_dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v4v6/cal_heat_dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/v4v6/cal_heat_dashboard/issues"
+  },
+  "homepage": "https://github.com/v4v6/cal_heat_dashboard#readme",
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "papaparse": "^5.5.3"
+  }
+}
