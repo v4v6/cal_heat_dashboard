@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>California Heat Dashboard</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 24px; }
+    .row { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
+    .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; min-width: 240px; }
+    select { padding: 6px 10px; }
+    #charts { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 18px; }
+    .muted { color: #666; }
+  </style>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <h1>California Heat Dashboard</h1>
+  <p class="muted">Data source: CDPH/HHS hospitalization & death records (Excel converted to CSV).</p>
+
+  <div class="row">
+    <div class="card">
+      <div><strong>Filter</strong></div>
+      <label for="icd">ICD version:</label>
+      <select id="icd"></select>
+
+      <label for="topN" style="margin-left: 12px;">Top conditions:</label>
+      <select id="topN">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <div><strong>Summary</strong></div>
+      <div id="summary"></div>
+    </div>
+  </div>
+
+  <div id="charts">
+    <div id="cases_trend" style="height: 420px;"></div>
+    <div id="top_conditions" style="height: 520px;"></div>
+    <div id="deaths_trend" style="height: 420px;"></div>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
