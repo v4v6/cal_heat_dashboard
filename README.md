@@ -22,3 +22,21 @@ This produces:
 
 - Add a dashboard app (Streamlit or a JS-based dashboard)
 - Add plots: time trends, condition breakdowns, and deaths vs total diagnoses
+
+## GitHub Pages (recommended)
+
+This repo includes a static dashboard that can be hosted on GitHub Pages (no server required).
+
+- Entry point: `docs/index.html`
+- Data bundled as CSV in: `docs/data/`
+
+### Enable Pages
+
+In GitHub:
+- Repo → **Settings** → **Pages**
+- Source: **Deploy from a branch**
+- Branch: `main`
+- Folder: `/docs`
+
+After enabling, your dashboard will be available at:
+`https://v4v6.github.io/cal_heat_dashboard/`
